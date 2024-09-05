@@ -9,7 +9,7 @@
 </head>
 <body>
     
-<header>
+ <header>
     <div class="min-h-full">
       <nav class="bg-gray-900">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -38,7 +38,27 @@
             </button>
           </div>
         </div>
+       
+        <div id="mobile-menu" class="hidden md:hidden">
+          <div class="px-2 pt-2 pb-3 space-y-1">
+            <a href="#" class="block text-white bg-gray-900 rounded-md px-3 py-2 text-base font-medium">Home</a>
+            <a href="#" class="block text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-base font-medium">Team</a>
+            <a href="#" class="block text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-base font-medium">Profile</a>
+            <a href="#" class="block text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-base font-medium">Phone</a>
+          </div>
+        </div>
+      </nav>
+    </div>
   </header>
+
+  <script>
+    const menuToggle = document.getElementById('menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    menuToggle.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+  </script>
 
 </body>
 </html>
